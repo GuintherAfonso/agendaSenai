@@ -1,15 +1,24 @@
 <?php
+session_start();
 include 'inc/header.inc.php';
 include 'classes/contatos.class.php';
+include 'classes/usuarios.class.php';
+
+if(!isset($_SESSION['logado'])){
+        header("Location: login.php");
+        exit;
+}
+
 $contatos = new Contatos();
+
 ?>
 
-<h1>Contatos</h1>
+<h1><center>Contatos</center></h1>
 <hr>
 <button><a href="adicionar_contato.php">ADICIONAR</a></button>
-<br><br>
-<button><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
-<br><br>
+
+<button style="float:right"><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
+<br>
 <hr>
 <table border="1" width="100%">
         <tr>
@@ -59,6 +68,10 @@ $contatos = new Contatos();
         endforeach;
         ?>
 </table>
+<br>
+<hr>
+ <button><a href="sair.php">SAIR</a></button>
+ <hr>
 
 
 
