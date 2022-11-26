@@ -4,7 +4,7 @@ include 'classes/contatos.class.php';
 $contatos = new Contatos();
 ?>
 
-<h1>Agenda</h1>
+<h1>Contatos</h1>
 <hr>
 <button><a href="adicionar_contato.php">ADICIONAR</a></button>
 <br><br>
@@ -30,7 +30,7 @@ $contatos = new Contatos();
         <tr>
                 <td>
                         <?php echo $item['id']; ?>
-                </td>
+                </td> 
                 <td>
                         <?php echo $item['nome']; ?>
                 </td>
