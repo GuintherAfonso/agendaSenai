@@ -4,7 +4,7 @@ include 'classes/contatos.class.php';
 $contatos = new Contatos();
 ?>
 
-<h1>Agenda Senai</h1>
+<h1>Agenda</h1>
 <hr>
 <button><a href="adicionar_contato.php">ADICIONAR</a></button>
 <br><br>
