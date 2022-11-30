@@ -1,7 +1,7 @@
 <?php require 'inc/header.inc.php';?>
 
-<h1>ADICIONAR CONTATO</h1>
-<form method="post" action="adicionar_contato_submit.php">
+<h1><center>ADICIONAR CONTATO</center></h1>
+<form method="post" align="center" action="adicionar_contato_submit.php">
     Nome: <br>
     <input type="text" name="nome"><br><br>
     DDD: <br>

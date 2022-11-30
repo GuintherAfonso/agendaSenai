@@ -18,8 +18,8 @@ if(!empty($_GET['id'])){
 
 ?>
 
-<h1>EDITAR CONTATO</h1>
-<form method="post" action="editar_contato_submit.php">
+<h1><center>EDITAR CONTATO</center></h1>
+<form method="post" align="center" action="editar_contato_submit.php">
     <input type="hidden" name="id" value="<?php echo $info['id'];?>">
     Nome: <br>
     <input type="text" name="nome" value="<?php echo $info['nome'];?>"><br><br>
