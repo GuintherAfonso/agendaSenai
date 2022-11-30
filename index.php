@@ -60,8 +60,7 @@ $contatos = new Contatos();
                 </td>
                 <td>
                         <button><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
-                        <button><a href="excluir_contato.php?id=<?php echo $item['id']; ?>"
-                                        onclick="return comfirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a></button>
+                        <button><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a></button>
                 </td>
         </tr>
         <?php

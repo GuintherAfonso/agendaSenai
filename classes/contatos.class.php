@@ -85,8 +85,7 @@ class Contatos
             echo "ERRO:" . $ex->getMessage();
         }
     }
-    public function editar($nome, $ddd, $telefone, $email, $cpf, $endereco, $id)
-    {
+    public function editar($nome, $ddd, $telefone, $email, $cpf, $endereco, $id){
         $emailExistente = $this->existeEmail($email);
         if (count($emailExistente) > 0 && $emailExistente['id'] != $id) {
             return FALSE;

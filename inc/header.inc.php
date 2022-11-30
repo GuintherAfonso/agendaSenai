@@ -9,5 +9,5 @@
 
    <body>
        <header>
-            <h1>Agenda Senai</h1>
+            <h1><center>Agenda</center></h1>
        </header>

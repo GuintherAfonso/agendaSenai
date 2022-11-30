@@ -1,5 +1,5 @@
        <footer>
-            <h1>Rodapé Senai</h1>
+            <h1><center>Senai</center></h1>
        </footer>
    </body>
 
