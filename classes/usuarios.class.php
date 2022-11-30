@@ -29,11 +29,34 @@ class Usuarios {
     }
 
     //CRUD para usuarios
-       // -adicionar
+    public function adicionar($nome,$email, $senha, $permissoes)
+    {
+        $emailExistente = $this->existeEmail($email);
+        if (count($emailExistente) == 0) {
+            try {
+                $this->nome = $nome;
+                $this->email = $email;
+                $this->senha = $senha;
+                $this->permissoes = $permissoes;
+                $sql = $this->con->conectar()->prepare("INSERT INTO usuarios(nome, email, senha, permissoes) VALUES(:nome, :email, :senha, :permissoes)");
+                $sql->bindValue(":nome", $nome);
+                $sql->bindValue(":email", $email);
+                $sql->bindValue(":senha", $senha);
+                $sql->bindValue(":permissoes", $permissoes);
+                $sql->execute();
+                return TRUE;
+            } catch (PDOException $ex) {
+                return 'ERRO: ' . $ex->getMessage();
+            }
+        } else {
+            return FALSE;
+        }
+
+    }
     public function listar(){
     
         try {
-            $sql = $this->con->conectar()->prepare("SELECT id, nome, email FROM usuarios");
+            $sql = $this->con->conectar()->prepare("SELECT id, nome, email, permissoes FROM usuarios");
             $sql->execute();
             return $sql->fetchAll();
         } catch (PDOException $ex) {

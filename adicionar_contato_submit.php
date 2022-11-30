@@ -11,7 +11,7 @@ if(!empty($_POST['email'])){
     $endereco = $_POST['endereco'];
 
     $contato->adicionar($email, $nome, $ddd, $telefone, $cpf, $endereco);
-    header('Location: index.php');
+    header("Location: index.php");
     
 }else{
     echo '<script type="text+javascript">alert("Email já cadastrado!")</script>';

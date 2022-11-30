@@ -11,7 +11,8 @@ if(!empty($_POST['id'])){
     $id = $_POST['id'];
 
     if(!empty($email)){
-        $contato->editar($nome, $ddd, $telefone, $email, $cpf, $endereco,$id);
+        $contato->editar($nome, $ddd, $telefone, $email, $cpf, $endereco, $id);
     }
     header("Location: /agendaSenai");
+    exit;
 }

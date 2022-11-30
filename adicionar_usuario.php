@@ -1,0 +1,18 @@
+<?php require 'inc/header.inc.php';?>
+
+<h1><center>ADICIONAR USUÁRIO</center></h1>
+<form method="post" action="adicionar_usuario_submit.php" align="center">
+    Nome: <br>
+    <input type="text" name="nome"><br><br>
+    Email: <br>
+    <input type="email" name="email"><br><br>
+    Senha: <br>
+    <input type="password" name="senha"><br><br>
+    Permissões: <br>
+    <input type="text" name="permissoes"><br><br>
+    
+    <input type="submit" name="btCadastrar" value="ADICIONAR">
+
+</form>
+ 
+<?php require 'inc/footer.inc.php';?>
