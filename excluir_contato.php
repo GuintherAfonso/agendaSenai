@@ -2,12 +2,12 @@
 include 'classes/contatos.class.php';
 $contato = new Contatos();
 
-if(!empty($GET['id'])){
-    $id = $GET['id'];
+if(!empty($_GET['id'])){
+    $id = $_GET['id'];
     $contato->excluir($id);
-    header("Location /agendaSenai");
+    header("Location: /agendaSenai");
 }else{
-    echo '<scrip type="text/javascript">alert("Erro ao excluir contato!")</script>';
-    header("Location /agendaSenai");
+    echo '<script type="text/javascript">alert("Erro ao excluir contato!");</script>';
+    header("Location: /agendaSenai");
 }
 ?>
