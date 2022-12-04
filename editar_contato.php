@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require 'inc/header.inc.php';
 require 'classes/contatos.class.php';
 $contato = new Contatos();
@@ -15,6 +16,14 @@ if(!empty($_GET['id'])){
     header("Location: /agendaSenai");
     exit;
 }
+
+if(!isset($_SESSION['logado'])){
+    header("Location: login.php");
+    exit;
+
+   
+}
+
 
 ?>
 
@@ -37,5 +46,9 @@ if(!empty($_GET['id'])){
     <input type="submit" value="SALVAR">
 
 </form>
+
+<br>
+<center><button><a href="index.php">VOLTAR</a></button></center>
+ 
  
 <?php require 'inc/footer.inc.php';?>

@@ -1,4 +1,19 @@
-<?php require 'inc/header.inc.php';?>
+<?php
+session_start(); 
+require 'inc/header.inc.php';
+require 'classes/contatos.class.php';
+$contato = new Contatos();
+
+if(!isset($_SESSION['logado'])){
+    header("Location: login.php");
+    exit;
+
+   
+}
+
+
+
+?>
 
 <h1><center>ADICIONAR CONTATO</center></h1>
 <form method="post" align="center" action="adicionar_contato_submit.php">
@@ -18,5 +33,7 @@
     <input type="submit" name="btCadastrar" value="ADICIONAR">
 
 </form>
+<br>
+<center><button><a href="index.php">VOLTAR</a></button></center>
  
 <?php require 'inc/footer.inc.php';?>

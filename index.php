@@ -10,14 +10,16 @@ if(!isset($_SESSION['logado'])){
 }
 
 $contatos = new Contatos();
+$usuarios = new Usuarios();
+$usuarios->setUsuario($_SESSION['logado']);
 
 ?>
 
 <h1><center>Contatos</center></h1>
 <hr>
-<button><a href="adicionar_contato.php">ADICIONAR</a></button>
+<?php if($usuarios->temPermissoes('ADD')): ?><button><a href="adicionar_contato.php">ADICIONAR</a></button><?php endif; ?>
 
-<button style="float:right"><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button>
+<?php if($usuarios->temPermissoes('SUPER')): ?><button style="float:right"><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button><?php endif; ?>
 <br>
 <hr>
 <table border="1" width="100%">
@@ -59,8 +61,8 @@ $contatos = new Contatos();
                         <?php echo $item['endereco']; ?>
                 </td>
                 <td>
-                        <button><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
-                        <button><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a></button>
+                       <?php if($usuarios->temPermissoes('EDIT')): ?><button><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button><?php endif; ?>
+                       <?php if($usuarios->temPermissoes('DEL')): ?><button><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a></button><?php endif; ?>
                 </td>
         </tr>
         <?php

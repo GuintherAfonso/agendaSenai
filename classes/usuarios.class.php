@@ -27,6 +27,7 @@ class Usuarios {
         }
         return $array;
     }
+   
 
     //CRUD para usuarios
     public function adicionar($nome,$email, $senha, $permissoes)
@@ -74,6 +75,7 @@ class Usuarios {
             } else {
                 return array();
             }
+
         } catch (PDOException $ex) {
             echo "ERRO:" . $ex->getMessage();
         }

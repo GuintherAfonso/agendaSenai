@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require 'inc/header.inc.php';
 require 'classes/usuarios.class.php';
 $usuario = new Usuarios();
@@ -15,6 +16,14 @@ if(!empty($_GET['id'])){
     header("Location: gestao_usuarios.php");
     exit;
 }
+
+if(!isset($_SESSION['logado'])){
+    header("Location: login.php");
+    exit;
+
+   
+}
+
 
 ?>
 
@@ -34,5 +43,9 @@ if(!empty($_GET['id'])){
     <input type="submit" value="SALVAR"> 
 
 </form>
+
+<br>
+<center><button><a href="index.php">VOLTAR</a></button></center>
+ 
  
 <?php require 'inc/footer.inc.php';?>
