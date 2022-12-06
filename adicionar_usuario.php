@@ -3,13 +3,17 @@ session_start();
 require 'inc/header.inc.php';
 require 'classes/usuarios.class.php';
 $usuario = new Usuarios();
+$usuario->setUsuario($_SESSION['logado']);
 
 if(!isset($_SESSION['logado'])){
     header("Location: login.php");
     exit;
-
-   
 }
+if(!$usuario->temPermissoes('SUPER')){
+    header("Location: /agendaSenai");
+    exit;
+}
+
 
 
 ?>

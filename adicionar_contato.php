@@ -2,13 +2,20 @@
 session_start(); 
 require 'inc/header.inc.php';
 require 'classes/contatos.class.php';
+require 'classes/usuarios.class.php';
 $contato = new Contatos();
 
 if(!isset($_SESSION['logado'])){
     header("Location: login.php");
     exit;
+}
 
-   
+$usuario = new Usuarios();
+$usuario->setUsuario($_SESSION['logado']);
+
+if(!$usuario->temPermissoes('ADD')){
+    header("Location: /agendaSenai");
+    exit;
 }
 
 

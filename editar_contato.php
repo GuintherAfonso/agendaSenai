@@ -2,7 +2,15 @@
 session_start();
 require 'inc/header.inc.php';
 require 'classes/contatos.class.php';
+require 'classes/usuarios.class.php';
 $contato = new Contatos();
+$usuario = new Usuarios();
+$usuario->setUsuario($_SESSION['logado']);
+
+if(!$usuario->temPermissoes('EDIT')){
+    header("Location: /agendaSenai");
+    exit;
+}
 
 if(!empty($_GET['id'])){
     $id = $_GET['id'];
@@ -20,8 +28,6 @@ if(!empty($_GET['id'])){
 if(!isset($_SESSION['logado'])){
     header("Location: login.php");
     exit;
-
-   
 }
 
 

@@ -11,6 +11,12 @@ if(!isset($_SESSION['logado'])){
 }
 
 $usuarios = new Usuarios();
+$usuarios->setUsuario($_SESSION['logado']);
+
+if(!$usuarios->temPermissoes('SUPER')){
+        header("Location: /agendaSenai");
+        exit;
+}
 
 ?>
 

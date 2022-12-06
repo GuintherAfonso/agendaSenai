@@ -20,8 +20,13 @@ if(!empty($_GET['id'])){
 if(!isset($_SESSION['logado'])){
     header("Location: login.php");
     exit;
+}
 
-   
+$usuario->setUsuario($_SESSION['logado']);
+
+if(!$usuario->temPermissoes('SUPER')){
+    header("Location: /agendaSenai");
+    exit;
 }
 
 

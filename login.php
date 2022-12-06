@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'classes/usuarios.class.php';
+include 'classes/usuarios.class.php';
 if(!empty($_POST['email'])){
     $email = addslashes($_POST['email']);
     $senha = md5($_POST['senha']);
