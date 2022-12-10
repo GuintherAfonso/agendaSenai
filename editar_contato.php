@@ -57,4 +57,4 @@ if(!isset($_SESSION['logado'])){
 <center><button><a href="index.php">VOLTAR</a></button></center>
  
  
-<?php require 'inc/footer.inc.php';?>
+<?php require 'inc/footer.inc.php'; ?>

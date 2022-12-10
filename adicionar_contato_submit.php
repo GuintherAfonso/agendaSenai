@@ -16,4 +16,5 @@ if(!empty($_POST['email'])){
 }else{
     echo '<script type="text+javascript">alert("Email já cadastrado!")</script>';
 }
+
 ?>

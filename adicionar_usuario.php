@@ -29,12 +29,12 @@ if(!$usuario->temPermissoes('SUPER')){
     Permissões: <br>
     <input type="text" name="permissoes"><br><br>
     
-    <input type="submit" name="btCadastrar" value="ADICIONAR">
+    <input class="button" type="submit" name="btCadastrar" value="ADICIONAR">
 
 </form>
 
 <br>
-<center><button><a href="gestao_usuarios.php">VOLTAR</a></button></center>
+<button class="button"><a href="gestao_usuarios.php">VOLTAR</a></button>
  
  
 <?php require 'inc/footer.inc.php';?>

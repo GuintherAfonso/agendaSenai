@@ -25,4 +25,5 @@ if(!empty($_POST['email'])){
         <input type="password" name="senha"><br><br>
         <input type="submit" value="Entrar">
     </form>    
+
 </fieldset>

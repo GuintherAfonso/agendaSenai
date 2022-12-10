@@ -15,14 +15,15 @@ $usuarios->setUsuario($_SESSION['logado']);
 
 ?>
 
-<h1><center>Contatos</center></h1>
+<h1>Contatos</h1>
 <hr>
-<?php if($usuarios->temPermissoes('ADD')): ?><button><a href="adicionar_contato.php">ADICIONAR</a></button><?php endif; ?>
+<?php if($usuarios->temPermissoes('ADD')): ?><button class="buttonadd"><a href="adicionar_contato.php">ADICIONAR</a></button><?php endif; ?>
 
-<?php if($usuarios->temPermissoes('SUPER')): ?><button style="float:right"><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button><?php endif; ?>
-<br>
+<?php if($usuarios->temPermissoes('SUPER')): ?><button class="buttongestao"><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button><?php endif; ?>
+
 <hr>
-<table border="1" width="100%">
+
+<table class="table table-striped" width="100%">
         <tr>
                 <th>ID</th>
                 <th>NOME</th>
@@ -61,8 +62,8 @@ $usuarios->setUsuario($_SESSION['logado']);
                         <?php echo $item['endereco']; ?>
                 </td>
                 <td>
-                       <?php if($usuarios->temPermissoes('EDIT')): ?><button><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button><?php endif; ?>
-                       <?php if($usuarios->temPermissoes('DEL')): ?><button><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a></button><?php endif; ?>
+                       <?php if($usuarios->temPermissoes('EDIT')): ?><button class="buttontable"><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button><?php endif; ?>
+                       <?php if($usuarios->temPermissoes('DEL')): ?><button class="buttontable"><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a></button><?php endif; ?>
                 </td>
         </tr>
         <?php
@@ -71,8 +72,12 @@ $usuarios->setUsuario($_SESSION['logado']);
 </table>
 <br>
 <hr>
- <button><a href="sair.php">SAIR</a></button>
- <hr>
+
+ <button class="button"><a href="sair.php">SAIR</a></button>
+
+
+
+
 
 
 

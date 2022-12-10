@@ -40,7 +40,7 @@ if(!$usuario->temPermissoes('SUPER')){
     Email: <br>
     <input type="email" name="email" value="<?php echo $info['email'];?>"><br><br>
     Senha: <br>
-    <input type="password" name="senha" value="<?php echo $info['senha'];?>"><br><br>
+    <input type="password" name="senha" value="<?php $info['senha'];?>"><br><br>
     Permissões: <br>
     <input type="text" name="permissoes" value="<?php echo $info['permissoes'];?>"><br><br>
     
@@ -50,7 +50,7 @@ if(!$usuario->temPermissoes('SUPER')){
 </form>
 
 <br>
-<center><button><a href="index.php">VOLTAR</a></button></center>
+<button><a href="index.php">VOLTAR</a></button>
  
  
 <?php require 'inc/footer.inc.php';?>

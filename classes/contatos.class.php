@@ -115,4 +115,5 @@ class Contatos
         $sql->execute();
     }
 }
+
 ?>
