@@ -20,16 +20,15 @@ if(!$usuarios->temPermissoes('SUPER')){
 
 ?>
 
-<h1><center>Usuários</center></h1>
+<h1>Usuários</h1>
 <hr>
-<button><a href="adicionar_usuario.php">ADICIONAR</a></button> 
+<button class="buttonadd"><a href="adicionar_usuario.php">ADICIONAR</a></button> 
 
-<button style="float:right"><a href="index.php">GESTÃO CONTATOS</a></button>
-<br>
+<button class="buttongestao"><a href="index.php">GESTÃO CONTATOS</a></button>
 <hr>
 
 
-<table border="1" width="100%" align="center">
+<table class="table table-striped">
 
        <tr>
                 <th>ID</th>
@@ -57,8 +56,8 @@ if(!$usuarios->temPermissoes('SUPER')){
                         <?php echo $item['permissoes']; ?>
                 </td>
                 <td>
-                        <button><a href="editar_usuario.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
-                        <button><a href="excluir_usuario.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este usuário?')">EXCLUIR</a></button>
+                        <button class="buttontable"><a href="editar_usuario.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
+                        <button class="buttontable"><a href="excluir_usuario.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este usuário?')">EXCLUIR</a></button>
                 </td>
         </tr>
         <?php
@@ -69,8 +68,9 @@ if(!$usuarios->temPermissoes('SUPER')){
 </table>  
 <br>
 <hr>
- <button><a href="sair.php">SAIR</a></button>
- <hr>
+ <button class="button"><a href="sair.php">SAIR</a></button>
+
+ 
  
  <?php
 include 'inc/footer.inc.php';

@@ -10,4 +10,5 @@ if(!empty($_GET['id'])){
     echo '<script type="text/javascript">alert("Erro ao excluir contato!");</script>';
     header("Location: /agendaSenai");
 }
+
 ?>

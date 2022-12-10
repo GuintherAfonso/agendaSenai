@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 19-Nov-2022 às 13:27
--- Versão do servidor: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Tempo de geração: 10-Dez-2022 às 20:30
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `agenda_senai`
+-- Banco de dados: `agenda_senai`
 --
 
 -- --------------------------------------------------------
@@ -43,8 +42,8 @@ CREATE TABLE `contatos` (
 --
 
 INSERT INTO `contatos` (`id`, `nome`, `ddd`, `telefone`, `email`, `cpf`, `endereco`) VALUES
-(1, 'Vanessa', '42', '99988333', 'vanessa@gmail.com', '87474747444', 'rua: Chile, 22'),
-(2, 'Cleber', '90', '92424242424', 'clebin@admin.senai.org', '066242424', 'rua: Sem noÃ§Ã£o, 24');
+(2, 'Cleber', '90', '9242424242', 'clebin@admin.senai.org', '066242424', 'rua: Sem noção, 24'),
+(3, 'João', '31', '5654654646', 'joazinho@gmail.com', '656565656', 'rua: Qualquer, 44');
 
 -- --------------------------------------------------------
 
@@ -61,36 +60,43 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `permissoes`) VALUES
+(1, 'Guinther', 'guintherafonso@gmail.com', '698dc19d489c4e4db73e28a713eab07b', 'ADD,EDIT,DEL,SUPER');
+
+--
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `contatos`
+-- Índices para tabela `contatos`
 --
 ALTER TABLE `contatos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuarios`
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `contatos`
+-- AUTO_INCREMENT de tabela `contatos`
 --
 ALTER TABLE `contatos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

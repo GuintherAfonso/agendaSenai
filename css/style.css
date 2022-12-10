@@ -1,0 +1,178 @@
+:root {
+ --header-footer-color: #0061AE;
+ --background-color: #FFFFFF;
+ --font-color: #000000;
+
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--header-footer-color);
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-footer-color);
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-color);
+    font-size: 50px;
+
+}
+
+hr {
+   border: 1px solid black; 
+   
+   
+   margin-left: 150px;
+   margin-right: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+} 
+a:visited{
+    color: var(--font-color);
+}
+a:hover {
+    color: var(--background-color);
+    background-color: var(--header-footer-color);
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+    text-align: center;
+
+}
+
+ table {
+    position: static;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 5px
+    
+} 
+
+
+
+th, td {
+    border: 2px solid black;
+    padding: 3px;
+    border-radius: 5px;
+    
+} 
+
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-color: black; 
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--background-color);
+
+}
+
+.button:hover {
+    color: var(--background-color);
+    background-color: var(--header-footer-color);
+}
+
+.buttonadd {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-color: black;
+    margin-left: 150px;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    padding: 5px;
+
+
+}
+
+.buttonadd:hover {
+    color: var(--background-color);
+    background-color: var(--header-footer-color);
+}
+
+.buttongestao {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-color: black; 
+    float: right;
+    margin-right: 150px;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    padding: 5px;
+
+}
+
+.buttongestao:hover {
+    color: var(--background-color);
+    background-color: var(--header-footer-color);
+}
+
+
+.buttontable {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-color: black; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    padding: 5px;
+}
+
+.buttontable:hover {
+    color: var(--background-color);
+    background-color: var(--header-footer-color);
+}
+
+
+img {
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.img2 {
+    position: relative;
+    width: 12%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+
+

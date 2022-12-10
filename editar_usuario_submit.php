@@ -13,4 +13,5 @@ if(!empty($_POST['id'])){
     }
     header("Location: gestao_usuarios.php");
     exit;
+
 }
