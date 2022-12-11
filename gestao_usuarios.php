@@ -20,12 +20,16 @@ if(!$usuarios->temPermissoes('SUPER')){
 
 ?>
 
-<h1>Usuários</h1>
-<hr>
-<button class="buttonadd"><a href="adicionar_usuario.php">ADICIONAR</a></button> 
+<div class="top">
+        
+                <a href="index.php">GESTÃO CONTATOS</a> 
+                <a href="adicionar_usuario.php">ADICIONAR USUÁRIO</a>
+                <a href="sair.php">SAIR</a>
+</div>
 
-<button class="buttongestao"><a href="index.php">GESTÃO CONTATOS</a></button>
-<hr>
+<h1>Usuários</h1>
+
+
 
 
 <table class="table table-striped">
@@ -56,8 +60,8 @@ if(!$usuarios->temPermissoes('SUPER')){
                         <?php echo $item['permissoes']; ?>
                 </td>
                 <td>
-                        <button class="buttontable"><a href="editar_usuario.php?id=<?php echo $item['id']; ?>">EDITAR</a></button>
-                        <button class="buttontable"><a href="excluir_usuario.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este usuário?')">EXCLUIR</a></button>
+                        <a href="editar_usuario.php?id=<?php echo $item['id']; ?>">EDITAR</a>
+                        <a href="excluir_usuario.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este usuário?')">EXCLUIR</a>
                 </td>
         </tr>
         <?php
@@ -66,9 +70,8 @@ if(!$usuarios->temPermissoes('SUPER')){
 
 
 </table>  
-<br>
-<hr>
- <button class="button"><a href="sair.php">SAIR</a></button>
+
+ 
 
  
  

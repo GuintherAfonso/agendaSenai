@@ -31,9 +31,9 @@ if(!$usuario->temPermissoes('SUPER')){
 
 
 ?>
-
-<h1><center>EDITAR USUÁRIO</center></h1>
-<form method="post" align="center" action="editar_usuario_submit.php" >
+<div class="container">
+<h1>EDITAR USUÁRIO</h1>
+<form method="post"  action="editar_usuario_submit.php" >
     <input type="hidden" name="id" value="<?php echo $info['id'];?>">
     Nome: <br>
     <input type="text" name="nome" value="<?php echo $info['nome'];?>"><br><br>
@@ -42,15 +42,22 @@ if(!$usuario->temPermissoes('SUPER')){
     Senha: <br>
     <input type="password" name="senha" value="<?php $info['senha'];?>"><br><br>
     Permissões: <br>
-    <input type="text" name="permissoes" value="<?php echo $info['permissoes'];?>"><br><br>
+    <select type="text" name="permissoes">
+    <option value="ADD">ADD</option>
+        <option value="EDIT">EDIT</option>
+        <option value="DEL">DEL</option>
+        <option value="SUPER">SUPER</option>
+        <option value="ADD,EDIT,DEL,SUPER">TODAS</option>
+        <option value="">NENHUMA</option>
+    </select>   
+        <br><br>
     
     
-    <input type="submit" value="SALVAR"> 
-
+    <input class="button" type="submit" value="SALVAR"> 
+    <a class="button" href="gestao_usuarios.php">VOLTAR</a>
 </form>
 
-<br>
-<button><a href="index.php">VOLTAR</a></button>
- 
+
+</div>
  
 <?php require 'inc/footer.inc.php';?>

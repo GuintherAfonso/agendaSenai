@@ -15,15 +15,21 @@ $usuarios->setUsuario($_SESSION['logado']);
 
 ?>
 
+
+<div class="top">
+       
+        
+          <?php if($usuarios->temPermissoes('SUPER')): ?><a href="gestao_usuarios.php">GESTÃO USUÁRIOS</a><?php endif; ?>
+          <?php if($usuarios->temPermissoes('ADD')): ?><a href="adicionar_contato.php">ADICIONAR CONTATO</a><?php endif; ?>
+          <a href="sair.php">SAIR</a> 
+          
+</div>
+
+
 <h1>Contatos</h1>
-<hr>
-<?php if($usuarios->temPermissoes('ADD')): ?><button class="buttonadd"><a href="adicionar_contato.php">ADICIONAR</a></button><?php endif; ?>
+    
 
-<?php if($usuarios->temPermissoes('SUPER')): ?><button class="buttongestao"><a href="gestao_usuarios.php">GESTÃO DE USUÁRIOS</a></button><?php endif; ?>
-
-<hr>
-
-<table class="table table-striped" width="100%">
+<table>
         <tr>
                 <th>ID</th>
                 <th>NOME</th>
@@ -62,18 +68,19 @@ $usuarios->setUsuario($_SESSION['logado']);
                         <?php echo $item['endereco']; ?>
                 </td>
                 <td>
-                       <?php if($usuarios->temPermissoes('EDIT')): ?><button class="buttontable"><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a></button><?php endif; ?>
-                       <?php if($usuarios->temPermissoes('DEL')): ?><button class="buttontable"><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a></button><?php endif; ?>
+                       <?php if($usuarios->temPermissoes('EDIT')): ?><a href="editar_contato.php?id=<?php echo $item['id']; ?>">EDITAR</a><?php endif; ?>
+                       <?php if($usuarios->temPermissoes('DEL')): ?><a href="excluir_contato.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Você tem certeza que quer excluir este contato?')">EXCLUIR</a><?php endif; ?>
                 </td>
         </tr>
         <?php
         endforeach;
         ?>
 </table>
-<br>
-<hr>
 
- <button class="button"><a href="sair.php">SAIR</a></button>
+
+
+
+ 
 
 
 

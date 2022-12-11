@@ -32,9 +32,9 @@ if(!isset($_SESSION['logado'])){
 
 
 ?>
-
-<h1><center>EDITAR CONTATO</center></h1>
-<form method="post" align="center" action="editar_contato_submit.php">
+<div class="container">
+<h1>EDITAR CONTATO</h1>
+<form method="post"  action="editar_contato_submit.php">
     <input type="hidden" name="id" value="<?php echo $info['id'];?>">
     Nome: <br>
     <input type="text" name="nome" value="<?php echo $info['nome'];?>"><br><br>
@@ -49,12 +49,12 @@ if(!isset($_SESSION['logado'])){
     Endereço: <br>
     <input type="text" name="endereco" value="<?php echo $info['endereco'];?>"><br><br>
     
-    <input type="submit" value="SALVAR">
-
+    <input class="button" type="submit" value="SALVAR">
+    <a class="button" href="index.php">VOLTAR</a>
 </form>
 
-<br>
-<center><button><a href="index.php">VOLTAR</a></button></center>
- 
+
+
+</div>
  
 <?php require 'inc/footer.inc.php'; ?>

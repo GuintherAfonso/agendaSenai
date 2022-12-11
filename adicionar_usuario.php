@@ -13,13 +13,10 @@ if(!$usuario->temPermissoes('SUPER')){
     header("Location: /agendaSenai");
     exit;
 }
-
-
-
 ?>
-
-<h1><center>ADICIONAR USUÁRIO</center></h1>
-<form method="post" action="adicionar_usuario_submit.php" align="center">
+<div class="container">
+<h1>ADICIONAR USUÁRIO</h1>
+<form method="post" action="adicionar_usuario_submit.php">
     Nome: <br>
     <input type="text" name="nome"><br><br>
     Email: <br>
@@ -27,14 +24,21 @@ if(!$usuario->temPermissoes('SUPER')){
     Senha: <br>
     <input type="password" name="senha"><br><br>
     Permissões: <br>
-    <input type="text" name="permissoes"><br><br>
-    
+    <select type="text" name="permissoes">
+    <option value="ADD">ADD</option>
+        <option value="EDIT">EDIT</option>
+        <option value="DEL">DEL</option>
+        <option value="SUPER">SUPER</option>
+        <option value="ADD,EDIT,DEL,SUPER">TODAS</option>
+        <option value="">NENHUMA</option>
+    </select>   
+        <br><br>
     <input class="button" type="submit" name="btCadastrar" value="ADICIONAR">
-
+    <a class="button" href="gestao_usuarios.php">VOLTAR</a>
 </form>
 
-<br>
-<button class="button"><a href="gestao_usuarios.php">VOLTAR</a></button>
- 
+
+
+</div>
  
 <?php require 'inc/footer.inc.php';?>

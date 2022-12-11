@@ -21,9 +21,9 @@ if(!$usuario->temPermissoes('ADD')){
 
 
 ?>
-
-<h1><center>ADICIONAR CONTATO</center></h1>
-<form method="post" action="adicionar_contato_submit.php">
+<div class="container">
+<h1>ADICIONAR CONTATO</h1>
+<form method="post"  action="adicionar_contato_submit.php">
     Nome: <br>
     <input type="text" name="nome"><br><br>
     DDD: <br>
@@ -37,10 +37,10 @@ if(!$usuario->temPermissoes('ADD')){
     Endereço: <br>
     <input type="text" name="endereco"><br><br>
     
-    <input class="button" type="submit" name="btCadastrar" value="ADICIONAR" class="button"> 
-
+    <input class="button" type="submit" name="btCadastrar" value="ADICIONAR">
+    <a class="button" href="index.php">VOLTAR</a>
 </form>
-<br>
-<button class="button"><a href="index.php">VOLTAR</a></button>
- 
+
+
+</div>
 <?php require 'inc/footer.inc.php';?>

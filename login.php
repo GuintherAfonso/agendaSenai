@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'inc/header.inc.php';
 include 'classes/usuarios.class.php';
 if(!empty($_POST['email'])){
     $email = addslashes($_POST['email']);
@@ -17,13 +18,17 @@ if(!empty($_POST['email'])){
 ?>
 
 <h1>LOGIN</h1>
-<fieldset>
+
     <form method="post">
         Email: <br>
         <input type="email" name="email"><br><br>
         Senha: <br>
         <input type="password" name="senha"><br><br>
-        <input type="submit" value="Entrar">
+        <input class="button" type="submit" value="Entrar">
     </form>    
 
-</fieldset>
+
+
+
+
+<?php include 'inc/footer.inc.php'; ?>

@@ -1,5 +1,5 @@
        <footer class="footer">
-           <img class="img2" src="img/sennnai.png">
+        <img class="img" src="img/senaibranco.png">
        </footer>
    </body>
 
