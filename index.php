@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include 'inc/header.inc.php';
@@ -90,4 +91,5 @@ $usuarios->setUsuario($_SESSION['logado']);
 
 <?php
 include 'inc/footer.inc.php';
+
 ?>

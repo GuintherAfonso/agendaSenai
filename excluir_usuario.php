@@ -1,3 +1,4 @@
+
 <?php
 include 'classes/usuarios.class.php';
 $usuario = new Usuarios();
@@ -11,4 +12,3 @@ if(!empty($_GET['id'])){
     header("Location: gestao_usuarios.php");
 }
 
-?>

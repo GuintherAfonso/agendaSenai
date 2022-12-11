@@ -1,3 +1,4 @@
+
 <?php 
 session_start();
 require 'inc/header.inc.php';
@@ -57,4 +58,3 @@ if(!isset($_SESSION['logado'])){
 
 </div>
  
-<?php require 'inc/footer.inc.php'; ?>

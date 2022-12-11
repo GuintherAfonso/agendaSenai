@@ -1,3 +1,4 @@
+
 <?php
 session_start(); 
 require 'inc/header.inc.php';
@@ -43,4 +44,3 @@ if(!$usuario->temPermissoes('ADD')){
 
 
 </div>
-<?php require 'inc/footer.inc.php';?>

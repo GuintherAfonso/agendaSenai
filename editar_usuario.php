@@ -1,3 +1,4 @@
+
 <?php 
 session_start();
 require 'inc/header.inc.php';
@@ -60,4 +61,3 @@ if(!$usuario->temPermissoes('SUPER')){
 
 </div>
  
-<?php require 'inc/footer.inc.php';?>

@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include 'inc/header.inc.php';
@@ -77,4 +78,5 @@ if(!$usuarios->temPermissoes('SUPER')){
  
  <?php
 include 'inc/footer.inc.php';
+
 ?>

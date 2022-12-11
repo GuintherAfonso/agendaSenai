@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
     // Fábrica de conexões //
      class Conexao {
@@ -26,5 +27,3 @@
               } 
           }
      }
-
-?>

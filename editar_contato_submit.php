@@ -1,7 +1,8 @@
+
 <?php
 require 'classes/contatos.class.php';
 $contato = new Contatos();
-if(!empty($_POST['id'])){
+if (!empty($_POST['id'])) {
     $nome = $_POST['nome'];
     $ddd = $_POST['ddd'];
     $telefone = $_POST['telefone'];
@@ -10,10 +11,10 @@ if(!empty($_POST['id'])){
     $endereco = $_POST['endereco'];
     $id = $_POST['id'];
 
-    if(!empty($email)){
+    if (!empty($email)) {
         $contato->editar($nome, $ddd, $telefone, $email, $cpf, $endereco, $id);
     }
     header("Location: /agendaSenai");
     exit;
-
 }
+?>

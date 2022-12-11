@@ -1,3 +1,4 @@
+
 <?php
 include 'classes/usuarios.class.php';
 $usuario = new Usuarios();
@@ -14,5 +15,3 @@ if(!empty($_POST['email'])){
 }else{
     echo '<script type="text+javascript">alert("Email já cadastrado!")</script>';
 }
-
-?>

@@ -1,3 +1,4 @@
+
 <?php
 include 'classes/contatos.class.php';
 $contato = new Contatos();
@@ -11,4 +12,3 @@ if(!empty($_GET['id'])){
     header("Location: /agendaSenai");
 }
 
-?>
