@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
     // Fábrica de conexões //
      class Conexao {
@@ -26,4 +26,5 @@
                   echo "ERRO: ".$ex->getMessage();  
               } 
           }
-     }
+     
+        }

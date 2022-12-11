@@ -58,6 +58,5 @@ if(!$usuario->temPermissoes('SUPER')){
     <a class="button" href="gestao_usuarios.php">VOLTAR</a>
 </form>
 
-
 </div>
  

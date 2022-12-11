@@ -54,7 +54,5 @@ if(!isset($_SESSION['logado'])){
     <a class="button" href="index.php">VOLTAR</a>
 </form>
 
-
-
 </div>
  

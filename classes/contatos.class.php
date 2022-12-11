@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 require_once 'conexao.class.php';
 
@@ -115,5 +115,6 @@ class Contatos
         $sql->bindValue(':id', $id);
         $sql->execute();
     }
+
 }
 

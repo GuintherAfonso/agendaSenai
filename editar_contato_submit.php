@@ -17,4 +17,5 @@ if (!empty($_POST['id'])) {
     header("Location: /agendaSenai");
     exit;
 }
+
 ?>

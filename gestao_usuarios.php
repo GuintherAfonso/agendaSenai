@@ -78,5 +78,4 @@ if(!$usuarios->temPermissoes('SUPER')){
  
  <?php
 include 'inc/footer.inc.php';
-
 ?>

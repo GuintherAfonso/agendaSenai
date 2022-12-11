@@ -42,5 +42,4 @@ if(!$usuario->temPermissoes('ADD')){
     <a class="button" href="index.php">VOLTAR</a>
 </form>
 
-
 </div>

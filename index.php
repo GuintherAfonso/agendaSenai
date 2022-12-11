@@ -91,5 +91,4 @@ $usuarios->setUsuario($_SESSION['logado']);
 
 <?php
 include 'inc/footer.inc.php';
-
 ?>

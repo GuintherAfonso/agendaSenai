@@ -10,5 +10,6 @@ if(!empty($_GET['id'])){
 }else{
     echo '<script type="text/javascript">alert("Erro ao excluir usuário!");</script>';
     header("Location: gestao_usuarios.php");
+
 }
 

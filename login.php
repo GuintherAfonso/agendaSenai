@@ -31,5 +31,4 @@ if(!empty($_POST['email'])){
 
 
 
-
 <?php include 'inc/footer.inc.php'; ?>
