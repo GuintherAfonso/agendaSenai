@@ -27,7 +27,7 @@ $usuarios->setUsuario($_SESSION['logado']);
 </div>
 
 
-<h1>Contatos</h1>
+<h1><a href="#""><img src="img/contato.png"></a>Contatos</h1>
     
 
 <table>

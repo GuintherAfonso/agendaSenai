@@ -28,8 +28,7 @@ if(!$usuarios->temPermissoes('SUPER')){
                 <a href="sair.php">SAIR</a>
 </div>
 
-<h1>Usuários</h1>
-
+<h1><a href="#""><img src="img/usuario.png"></a>Usuários</h1>
 
 
 
